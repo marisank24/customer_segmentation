@@ -1,100 +1,13 @@
-🧑‍🤝‍🧑 Customer Personality Analysis – EDA & Clustering
-📌 Project Overview
+Customer Personality Analysis – EDA & Clustering
 
-This project focuses on Customer Personality Analysis using the Customer Personality Analysis dataset.
-The main goal is to understand customer behavior, spending patterns, and preferences to create customer segments using clustering techniques.
+This project focuses on Customer Personality Analysis using the Customer Personality Analysis dataset from Kaggle. The goal is to understand customer behavior, spending patterns, and preferences, and then segment customers into meaningful groups using clustering techniques. By identifying these customer segments, businesses can design personalized marketing strategies, improve product targeting, and maximize return on investment.
 
-By segmenting customers, businesses can tailor marketing strategies, product recommendations, and campaigns to specific groups, improving ROI.
+The dataset contains customer demographic details such as age, education, marital status, and income, along with product-level spending on categories like wines, fruits, meat, fish, sweets, and gold. It also includes customer responses to marketing campaigns, purchase channels (web, catalog, and store), complaints, and recency of purchase.
 
-🗂 Dataset
+The workflow of the project begins with data preprocessing, where irrelevant columns such as Z_CostContact and Z_Revenue were removed, missing values in the Income column were handled, new features like Age, Total Spending, Family Size, and Customer For were created, and outliers were treated. This was followed by exploratory data analysis (EDA), which explored the distribution of demographics, income, and spending behavior, as well as purchase channel preferences and campaign responses. Visualizations were created using Seaborn, Matplotlib, and Plotly to make the findings more interpretable.
 
-Source: Customer Personality Analysis Dataset
+For segmentation, the dataset was standardized and clustering was applied. K-Means clustering was performed, with the optimal number of clusters chosen using the Silhouette Score and Elbow Method. Hierarchical clustering was also carried out for comparison. The resulting clusters were profiled to reveal distinct customer groups, such as high-income luxury spenders, families with children preferring catalog and store purchases, younger customers who use the web channel more, and campaign-responsive segments.
 
-Attributes:
+In summary, this project demonstrates the complete pipeline of customer analysis starting from cleaning and feature engineering, to exploratory analysis, and finally customer segmentation using clustering. The three main contributions are: (1) Data cleaning and feature engineering to prepare a high-quality dataset, (2) Exploratory analysis to uncover customer demographics, spending behavior, and preferences, and (3) Clustering and segmentation using K-Means with Silhouette Score and Hierarchical clustering to identify actionable customer groups for targeted marketing strategies.
 
-Demographics: Age, Education, Marital Status, Income, etc.
-
-Products: Spending on Wines, Fruits, Meat, Fish, Sweets, Gold.
-
-Promotion Response: Campaign acceptance history.
-
-Channels: Web, Catalog, Store purchases, Website visits.
-
-Complaints & Recency.
-
-🔧 Steps in the Project
-
-Data Preprocessing
-
-Removed irrelevant columns (Z_CostContact, Z_Revenue).
-
-Handled missing values (Income).
-
-Created new features (Age, Total Spending, Family Size, Customer For).
-
-Removed outliers.
-
-Exploratory Data Analysis (EDA)
-
-Univariate & bivariate analysis of demographics, spending behavior, and purchase channels.
-
-Visualizations with Seaborn, Matplotlib, and Plotly.
-
-Clustering
-
-Scaled numerical features.
-
-Applied K-Means Clustering (optimal K chosen using Silhouette Score & Elbow Method).
-
-Performed Hierarchical Clustering for comparison.
-
-Cluster profiling to describe segment behavior.
-
-📊 Key Insights
-
-High-income customers spend more on wines and luxury items.
-
-Families with children prefer catalog and store purchases.
-
-Younger customers prefer the web channel.
-
-Some customer groups are more campaign-responsive, guiding better marketing targeting.
-
-📂 Project Structure
-├── customer-analysis-eda-report-clustering.ipynb   # Main Jupyter Notebook
-├── customer_analysis_report_updated.pdf            # Detailed PDF Report
-├── README.md                                       # Project Documentation
-
-🚀 Tech Stack
-
-Python
-
-Libraries: Pandas, NumPy, Seaborn, Matplotlib, Plotly, Scikit-learn
-
-Clustering: K-Means, Hierarchical Clustering
-
-📌 How to Run
-
-Clone the repo:
-
-git clone https://github.com/your-username/customer-personality-analysis.git
-cd customer-personality-analysis
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Run the notebook:
-
-jupyter notebook customer-analysis-eda-report-clustering.ipynb
-
-✅ Summary in 3 Points
-
-Data Cleaning & Feature Engineering – Handled missing values, created derived features, and removed outliers.
-
-EDA – Analyzed demographics, spending behavior, and channel usage with visualizations.
-
-Clustering & Segmentation – Applied K-Means (Silhouette Score for optimal K) & Hierarchical Clustering to build meaningful customer segments.
 
